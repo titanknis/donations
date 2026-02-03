@@ -35,7 +35,7 @@ setInterval(changeQuote, 3000);
 
 // العد التنازلي
 function updateCountdown() {
-  const endDate = new Date("2026-02-09T23:59:59");
+  const endDate = new Date("2026-02-16T23:59:59");
   const now = new Date();
   let diff = endDate - now;
   const el = document.getElementById("countdown");
