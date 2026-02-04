@@ -79,11 +79,11 @@
         <!-- Messages -->
         <div
           id="successMessage"
-          class="message success bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded-lg text-sm"
+          class="message success bg-green-100 border border-green-400 text-green-800 px-4 py-3 rounded-lg text-sm mb-4"
         ></div>
         <div
           id="errorMessage"
-          class="message error bg-red-100 border border-red-400 text-red-800 px-4 py-3 rounded-lg text-sm"
+          class="message error bg-red-100 border border-red-400 text-red-800 px-4 py-3 rounded-lg text-sm mb-4"
         ></div>
 
         <form id="donationForm">
@@ -212,7 +212,6 @@
                     type="email"
                     id="donorEmail"
                     name="donorEmail"
-                    placeholder="example@email.com"
                     class="w-full border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
                   />
                 </div>
@@ -226,7 +225,6 @@
                     type="tel"
                     id="donorPhone"
                     name="donorPhone"
-                    placeholder="+216 XX XXX XXX"
                     class="w-full border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
                   />
                 </div>
@@ -234,16 +232,15 @@
             </div>
           </div>
 
-          <!-- ════════════ 🔵 DONATION DETAILS SECTION ════════════ -->
-          <div class="mb-8 pb-8 border-b border-gray-200">
-            <!-- Section banner — blue -->
+          <!-- ════════════ 🔵 DONATION DETAILS ════════════ -->
+          <div class="mb-6">
             <h3
               class="text-sm font-semibold text-blue-700 bg-blue-50 border-r-4 border-blue-600 pr-4 pl-3 py-2.5 rounded-l-lg mb-5"
             >
               📦 تفاصيل التبرع / Donation Details
             </h3>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="grid grid-cols-1 gap-5">
               <!-- Item -->
               <div>
                 <label
@@ -429,7 +426,7 @@
             إجمالي التبرعات / Total Donations
           </p>
           <p
-            id="totalDonations"
+            id="donation-count"
             class="text-3xl font-extrabold text-green-700 mt-1"
           >
             ...
@@ -442,7 +439,7 @@
             عدد المتبرعين / Total Donors
           </p>
           <p
-            id="totalDonors"
+            id="donor-count"
             class="text-3xl font-extrabold text-blue-600 mt-1"
           >
             ...
@@ -457,7 +454,7 @@
             المبالغ المالية / Money Donated
           </p>
           <p
-            id="totalMoney"
+            id="money-amount"
             class="text-3xl font-extrabold text-amber-600 mt-1"
           >
             ...
@@ -467,7 +464,10 @@
       </div>
     </div>
 
-    <!-- Supabase script -->
-    <script src="supabase.js"></script>
+    <!-- Supabase scripts -->
+    <script type="module" src="../supabase_client.js"></script>
+    <script type="module" src="./logout.js"></script>
+    <script type="module" src="./staff-dashboard.js"></script>
+    <script type="module" src="./donation-form.js"></script>
   </body>
 </html>
