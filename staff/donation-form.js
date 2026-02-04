@@ -1,4 +1,9 @@
 import { supabase } from "../supabase_client.js";
+import {
+  loadDonorCount,
+  loadDonationCount,
+  loadMoneyAmount,
+} from "../supabase_functions.js";
 
 // ═══════════════════════════════════════════
 // STATE MANAGEMENT
@@ -539,3 +544,7 @@ function hideMessages() {
 // ═══════════════════════════════════════════
 
 checkAuthAndLoadData();
+
+loadDonorCount();
+loadDonationCount();
+loadMoneyAmount();
